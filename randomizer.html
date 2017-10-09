@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>BITD - Random Darkness</title>
+        <meta name="description" content="">
+        <meta name="author" content="jsc">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="fonts/foundation-icons.css">
+        <link rel="stylesheet" href="css/foundation.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="bitd.data.js"></script>
+        <script src="bitd.namespace.js"></script>
+		
+		<style>
+			#display {     
+				margin: 1.125rem 0;
+				padding: 1.25rem;
+				border: 1px solid #cacaca;
+				height : 70vh;
+				overflow: scroll;
+			}
+			#clearButtonWrap {
+				height: 20vh;
+			}
+			#logWrapper {
+				position: fixed; bottom: 0;
+				height: 20vh;
+				overflow:scroll;
+				width: 100%;
+				border-top: 1px solid #cacaca;
+				background: #fff;
+				font-size: 0.75em;
+				display: none;
+			}
+			.lowercase {
+				text-transform:lowercase;
+			}
+			.capitalize {
+				text-transform:capitalize;
+			}
+		</style>
+
+    </head>
+
+    <body>
+        <div>
+            <header>
+                <h1>Blades in the Dark - Random Darkness</h1>
+            </header>
+			<div class="row">
+				<div class="medium-6 columns">
+					<div class="fieldset">
+						<input class="button" type="button" id="generateNPC" value="Generate Person">
+						<br>
+						<input class="button" type="button" id="generateStreet" value="Generate Street">
+						<br>
+						<input class="button" type="button" id="generateBuilding" value="Generate Building">
+						<br>
+						<input class="button" type="button" id="generateJob" value="Generate Job">
+					</div>
+				</div>
+			
+				<div class="medium-6 columns">
+					<div id="display"></div>
+					<div id="clearButtonWrap"><input class="button" type="button" id="clear" value="Clear Display"></div>
+				</div>
+			</div>
+			<div id="logWrapper">
+				<h2>Log</h2>
+					<p id="log">
+						
+					</p>
+			</div>
+            <footer>
+                <p>
+                    &copy; Copyright  by jsc - feel free to use as you see fit
+                </p>
+            </footer>
+        </div>
+        <script>
+            BITD.methods.initRandomDarkness();
+        </script>
+    </body>
+</html>
